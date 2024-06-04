@@ -1,0 +1,8 @@
+llama-index
+llama-hub
+openai
+python-dotenv
+transformers
+streamlit
+langchain_openai
+langchain_community
