@@ -6,3 +6,7 @@ transformers
 streamlit
 langchain_openai
 langchain_community
+langserve
+fastapi
+uvicorn
+sse_starlette
