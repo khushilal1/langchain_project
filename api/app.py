@@ -25,17 +25,19 @@ model = ChatOpenAI()
 # llam2 model
 llm = Ollama(model="llama2")
 # prompt
-prompt1 = ChatPromptTemplate.from_template("Write essay about {topic} with ¨ words")
-prompt2 = ChatPromptTemplate.from_template("Write poem about {topic} for 5 year child with  100 words")
+# prompt1 = ChatPromptTemplate.from_template("Write essay about {topic} with ¨ words")
+prompt2 = ChatPromptTemplate.from_template(
+    "Write {option} about {topic} for  {no_of_word} words"
+)
 
 # adding routes as api
-add_routes(app, prompt1 | model, path="/essay")
+# add_routes(app, prompt1 | model, path="/essay")
 
 
 # adding other routes as api
 add_routes(app, prompt2 | llm, path="/poem")
 
 
-#starting of the app or end point of the app
+# starting of the app or end point of the app
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
