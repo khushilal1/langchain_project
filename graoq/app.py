@@ -91,7 +91,7 @@ if prompt1:
     # writing the reponse
     st.write(response["answer"])
 
-    # with  srreamlit expande
+    # with  srreamlit expand
 
     with st.expander("Document similarity search"):
         # find the relevant chunks
